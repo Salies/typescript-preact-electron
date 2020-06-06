@@ -6,7 +6,7 @@ var main = {
   entry: path.join(__dirname, 'src', 'index'),
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dst')
+    path: path.resolve(__dirname, 'dist')
   },
   node: {
     __dirname: false,
@@ -37,7 +37,7 @@ var renderer = {
   entry: path.join(__dirname, 'src', 'renderer', 'index'),
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dst', 'scripts')
+    path: path.resolve(__dirname, 'dist', 'scripts')
   },
   resolve: {
     extensions: ['.json', '.js', '.jsx', '.css', '.ts', '.tsx']
