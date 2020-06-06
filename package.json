@@ -2,14 +2,14 @@
   "name": "typescript-preact-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "dst/index.js",
+  "main": "dist/index.js",
   "environments": {
-    "platform": "linux darwin"
+    "platform": "win32"
   },
   "scripts": {
-    "build": "webpack --display-error-details && cp src/*.html src/package.json dst/",
-    "run": "npm run build && electron dst/",
-    "package": "npm run build && for platform in ${npm_package_environments_platform}; do electron-packager dst/ ${npm_package_name} --out build/ --platform=${platform} --arch=x64 --overwrite; done"
+    "build": "webpack --display-error-details && for %I in (src\\*.html src\\package.json) do copy %I  dist\\",
+    "run": "npm run build && electron dist\\",
+    "package": "npm run build && for platform in ${npm_package_environments_platform}; do electron-packager dist\\ ${npm_package_name} --out build\\ --platform=${platform} --arch=x64 --overwrite; done"
   },
   "author": "",
   "license": "MIT",
